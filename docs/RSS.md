@@ -26,7 +26,7 @@ RSS_DESCRIPTION=<RSS 描述，默认为 Feed from Rin>
 如：
 
 ```
-xeu.life/sub/*
+chfychin.com/sub/*
 ```
 
 Worker 选择为部署的 Worker，点击保存。

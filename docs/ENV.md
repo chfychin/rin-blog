@@ -6,7 +6,7 @@
 |-------------|------|------------------------------|-------|--------------------------------------------------|
 | API_URL     | 是    | 后端地址                         | 无     | http://localhost:3001                            |
 | AVATAR      | 是    | 网站左上角头像地址                    | 无     | https://avatars.githubusercontent.com/u/36541432 |
-| NAME        | 是    | 网站左上角名称 & 标题                 | 无     | Xeu                                              |
+| NAME        | 是    | 网站左上角名称 & 标题                 | 无     | chfychin                                              |
 | DESCRIPTION | 否    | 网站左上角描述                      | 无     | 杂食动物                                             |
 | PAGE_SIZE   | 否    | 默认分页限制                       | 5     | 5                                                |
 | RSS_ENABLE  | 否    | 是否启用 RSS(启用后会在站点底部显示 RSS 链接) | false | true                                             |
@@ -30,13 +30,13 @@
 
 | 名称              | 是否必须 | 描述                                      | 默认值         | 示例值                                                             |
 |-----------------|------|-----------------------------------------|-------------|-----------------------------------------------------------------|
-| FRONTEND_URL    | 暂时必须 | 评论通知 Webhook 时包含评论文章链接时所需，可留空           | 无           | https://xeu.life                                                |
+| FRONTEND_URL    | 暂时必须 | 评论通知 Webhook 时包含评论文章链接时所需，可留空           | 无           | https://chfychin.com                                               |
 | S3_FOLDER       | 是    | 上传保存图片时资源存放的文件路径                        | 无           | images/                                                         |
 | S3_BUCKET       | 是    | S3 存储桶名称                                | 无           | images                                                          |
 | S3_REGION       | 是    | S3 存储桶所在区域，如使用 Cloudflare R2 填写 auto 即可 | 无           | auto                                                            |
 | S3_ENDPOINT     | 是    | S3 存储桶接入点地址                             | 无           | https://1234567890abcdef1234567890abcd.r2.cloudflarestorage.com |
 | WEBHOOK_URL     | 否    | 新增评论时发送 Webhook 通知目标地址                  | 无           | https://webhook.example.com/webhook                             |
-| S3_ACCESS_HOST  | 否    | S3 存储桶访问地址                              | S3_ENDPOINT | https://image.xeu.life                                          |
+| S3_ACCESS_HOST  | 否    | S3 存储桶访问地址                              | S3_ENDPOINT | https://image.chfychin.com                                        |
 | S3_CACHE_FOLDER | 否    | S3 缓存文件夹（用于 SEO、高频请求缓存）                 | cache/      | cache/                                                          |
 
 **加密环境变量，以下所有内容均为必须（Webhook 除外）**
