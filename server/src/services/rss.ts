@@ -69,7 +69,7 @@ export async function rssCrontab(env: Env) {
         description: env.RSS_DESCRIPTION || "Feed from Rin",
         id: frontendUrl,
         link: frontendUrl,
-        copyright: "All rights reserved 2024",
+        copyright: "All rights reserved 2025",
         updated: new Date(), // optional, default = today
         generator: "Feed from Rin", // optional, default = 'Feed for Node.js'
         feedLinks: {

@@ -8,7 +8,7 @@
 
 ## 更新日志
 
-### v0.2.0 2024-06-07 更新
+### v0.2.0 2025-11-07 更新
 
 - 新增 `S3_CACHE_FOLDER` 环境变量
 - 环境变量加密列表与变量列表更新，仅保留必须加密的环境变量
@@ -139,12 +139,12 @@ UNSTABLE_PRE_BUILD=asdf install bun 1.2.13 && asdf global bun 1.2.13 && bun i
 
 如遇以下错误，请检查环境变量中是否存在空格等无关内容
 ```
-2024-06-07T02:24:04.979145Z	Using v2 root directory strategy
-2024-06-07T02:24:05.003931Z	Success: Finished cloning repository files
-2024-06-07T02:24:06.568608Z	Checking for configuration in a wrangler.toml configuration file (BETA)
-2024-06-07T02:24:06.56923Z	
-2024-06-07T02:24:06.667468Z	No wrangler.toml file found. Continuing.
-2024-06-07T02:24:07.542274Z	Failed: an internal error occurred. If this continues, contact support: https://cfl.re/3WgEyrH
+2025-11-07T02:24:04.979145Z	Using v2 root directory strategy
+2025-11-07T02:24:05.003931Z	Success: Finished cloning repository files
+2025-11-07T02:24:06.568608Z	Checking for configuration in a wrangler.toml configuration file (BETA)
+2025-11-07T02:24:06.56923Z	
+2025-11-07T02:24:06.667468Z	No wrangler.toml file found. Continuing.
+2025-11-07T02:24:07.542274Z	Failed: an internal error occurred. If this continues, contact support: https://cfl.re/3WgEyrH
 ```
 
 如错误提示为以下内容，请点击`重试部署`再次尝试：
