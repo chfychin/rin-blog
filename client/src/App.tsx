@@ -58,7 +58,6 @@ function App() {
         }
       })
     }
-
     const config = sessionStorage.getItem('config')
     if (config) {
       const configObj = JSON.parse(config)
@@ -73,7 +72,6 @@ function App() {
         }
       })
     }
-
     const ua = navigator.userAgent;
     const hasFetchAction = /FetchAction/.test(ua);
     if (!hasFetchAction && !externalHTMLLoaded.current) {
@@ -82,7 +80,7 @@ function App() {
         { src: "https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js" },
         { src: "https://npm.elemecdn.com/meting@2.0.1/dist/Meting.min.js" },
       ];
-      const live2dScript = { src: "https://api.obdo.cc/live2d.js" };
+      const live2dScript = { src: "https://assets.xn--9iq088f7qityd.com/js/live2d.js" };
 
       Promise.all(musicScripts.map(script => new Promise<void>((resolve, reject) => {
         const scriptElement = document.createElement('script');
@@ -131,7 +129,7 @@ function App() {
             <RouteMe path="/timeline">
               <TimelinePage />
             </RouteMe>
-
+            
             <RouteMe path="/moments">
               <MomentsPage />
             </RouteMe>
