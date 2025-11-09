@@ -31,6 +31,7 @@ function App() {
   const { t } = useTranslation()
   const [profile, setProfile] = useState<Profile | undefined>()
   const [config, setConfig] = useState<ConfigWrapper>(new ConfigWrapper({}, new Map()))
+  const externalHTMLLoaded = useRef(false);
   useEffect(() => {
     // --- 自动缩放逻辑开始 ---
     const HIGH_RES_THRESHOLD = 2560; // 定义高分屏阈值
