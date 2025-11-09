@@ -1,7 +1,12 @@
 name: Deploy
 
 on:
-  workflow_dispatch:  # 只保留手动触发
+  push:
+    branches:
+      - dev
+      - main
+      - fix/*
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -23,15 +28,10 @@ jobs:
         with:
           bun-version: 1.2.13
 
-      - name: Install dependencies
-        run: |
-          cd Rin/
-          bun install
-
-      - name: Deploy to Cloudflare
-        env:
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - name: Deploy
+        env: # Or as an environment variable
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID  }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN  }}
           S3_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
           S3_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
@@ -53,4 +53,5 @@ jobs:
           RSS_DESCRIPTION: ${{ vars.RSS_DESCRIPTION }}
         run: |
           cd Rin/
-          bun run deploy
+          bun install
+          bun scripts/migrator.ts
