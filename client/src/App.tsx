@@ -98,41 +98,19 @@ function App() {
 
         const externalContainer = document.createElement('div');
         externalContainer.innerHTML = `
-          <!-- 音乐播放器，只在PC端宽度>1000px时显示 -->
-          <link rel="stylesheet" href="https://blog-static.cnblogs.com/files/miluluyo/APlayer.min.css">
+          <!-- 音乐播放器 -->
           <div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="8922088627" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div>
           <script>
-            // 检查是否为PC端
-            function checkIsPC() {
-              return window.innerWidth > 1000;
-            }
-            
-            // 初始显示/隐藏逻辑
-            function togglePlayerVisibility() {
-              const player = document.getElementById('player');
-              if (player) {
-                player.style.display = checkIsPC() ? 'block' : 'none';
-              }
-            }
-            
-            // 页面加载时执行
-            document.addEventListener('DOMContentLoaded', function() {
-              togglePlayerVisibility();
-              
-              // 监听窗口大小变化
-              window.addEventListener('resize', togglePlayerVisibility);
-              
-              // 自动播放逻辑
-              let ref = setInterval(function(){
-                if (checkIsPC() && document.querySelector(".aplayer-play")) {
-                  const playButton = document.querySelector(".aplayer-play");
-                  if (playButton) {
-                    playButton.click();
-                    clearInterval(ref);
-                  }
+            // 自动播放逻辑
+            let ref = setInterval(function(){
+              if (document.querySelector(".aplayer-play")) {
+                const playButton = document.querySelector(".aplayer-play");
+                if (playButton) {
+                  playButton.click();
+                  clearInterval(ref);
                 }
-              }, 2000);
-            });
+              }
+            }, 2000);
           <\/script>
         `;
         document.body.appendChild(externalContainer);
