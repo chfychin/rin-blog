@@ -98,20 +98,9 @@ function App() {
 
         const externalContainer = document.createElement('div');
         externalContainer.innerHTML = `
-          <!-- 音乐播放器 -->
-          <div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="8922088627" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div>
-          <script>
-            // 自动播放逻辑
-            let ref = setInterval(function(){
-              if (document.querySelector(".aplayer-play")) {
-                const playButton = document.querySelector(".aplayer-play");
-                if (playButton) {
-                  playButton.click();
-                  clearInterval(ref);
-                }
-              }
-            }, 2000);
-          <\/script>
+          <div style="max-width: 100px; margin: auto;">
+            <meting-js autoplay="false" order="random" theme="#409EFF" list-folded="true" fixed="true" auto="https://music.163.com/#/playlist?id=8922088627"/>
+          </div>
         `;
         document.body.appendChild(externalContainer);
       });
